@@ -1,0 +1,10 @@
+<launch>
+  <!--  *********** Bringup the usb camera *********** -->
+  <include file="$(find rbx1_vision)/launch/usb_cam.launch" />
+
+
+  <!--  *********** Face tracker *********** -->
+  <include file="$(find rbx1_vision)/launch/face_tracker2.launch" />
+
+
+</launch>
