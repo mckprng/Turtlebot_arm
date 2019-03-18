@@ -22,17 +22,17 @@ In the turtlebot_arm_bringup launch file, I have added new launch file
 
 ## =======For the head tracker and move the arm=======
 
-# For bringup the arm and moveit
-  roslaunch turtlebot_arm_bringup arm_moveit_withoutcam.launch
+  # For bringup the arm and moveit
+    roslaunch turtlebot_arm_bringup arm_moveit_withoutcam.launch
 
-# For bringup the arm and moveit with kinect
-  roslaunch turtlebot_arm_bringup arm_moveit.launch
+  # For bringup the arm and moveit with kinect
+    roslaunch turtlebot_arm_bringup arm_moveit.launch
 
-# For launch usb camera and face tracker
-  roslaunch turtlebot_arm_bringup usbcam_face.launch
+  # For launch usb camera and face tracker
+    roslaunch turtlebot_arm_bringup usbcam_face.launch
 
-# For running the head tracker demo 
-  rosrun turtlebot_arm_moveit_demos head_tracker.py
+  # For running the head tracker demo 
+    rosrun turtlebot_arm_moveit_demos head_tracker.py
 
-# For running the face tracker
-  roslaunch rbx1_vision face_tracker2.launch
+  # For running the face tracker
+    roslaunch rbx1_vision face_tracker2.launch
