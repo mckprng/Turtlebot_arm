@@ -11,9 +11,9 @@ In the turtlebot_arm_bringup launch file, I have added new launch file
   -usbcam_face.launch --> For launch usb camera and face tracker
 
 ## Necessary packages for the demonstration
- -- rbx1 from pirobot 
+ # rbx1 from pirobot 
     git clone https://github.com/IOJVision/rbx1.git
- -- freenect launcher 
+ # freenect launcher 
     build from source: https://github.com/ros-drivers/freenect_stack.git
     or by sudo apt-get install ros-indigo-freenect-camera ros-indigo-freenect-launch 
 
