@@ -18,21 +18,21 @@ In the turtlebot_arm_bringup launch file, I have added new launch file
     or by sudo apt-get install ros-indigo-freenect-camera ros-indigo-freenect-launch 
 
 
-Here is the list of command to run the head tracker program and bringup arm, rviz, kinect
+## Here is the list of command to run the head tracker program and bringup arm, rviz, kinect
 
-=======For the head tracker and move the arm=======
+## =======For the head tracker and move the arm=======
 
-## For bringup the arm and moveit
-roslaunch turtlebot_arm_bringup arm_moveit_withoutcam.launch
+# For bringup the arm and moveit
+  roslaunch turtlebot_arm_bringup arm_moveit_withoutcam.launch
 
-## For bringup the arm and moveit with kinect
-roslaunch turtlebot_arm_bringup arm_moveit.launch
+# For bringup the arm and moveit with kinect
+  roslaunch turtlebot_arm_bringup arm_moveit.launch
 
-## For launch usb camera and face tracker
-roslaunch turtlebot_arm_bringup usbcam_face.launch
+# For launch usb camera and face tracker
+  roslaunch turtlebot_arm_bringup usbcam_face.launch
 
-## For running the head tracker demo 
-rosrun turtlebot_arm_moveit_demos head_tracker.py
+# For running the head tracker demo 
+  rosrun turtlebot_arm_moveit_demos head_tracker.py
 
-## For running the face tracker
-roslaunch rbx1_vision face_tracker2.launch
+# For running the face tracker
+  roslaunch rbx1_vision face_tracker2.launch
