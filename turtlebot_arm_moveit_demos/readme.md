@@ -6,9 +6,9 @@ The new demo will let the arm to react when there is face detected by the kinect
 ## Setup and how to run it 
 In the turtlebot_arm_bringup launch file, I have added new launch file
 
-  * _arm_moveit.launch --> For bringup the arm and moveit with kinect
-  * _arm_moveit_without_cam.launch --> For bringup the arm and moveit
-  * _usbcam_face.launch --> For launch usb camera and face tracker
+  * arm_moveit.launch --> For bringup the arm and moveit with kinect
+  * arm_moveit_without_cam.launch --> For bringup the arm and moveit
+  * usbcam_face.launch --> For launch usb camera and face tracker
 
 ## Necessary packages for the demonstration
  # rbx1 from pirobot 
