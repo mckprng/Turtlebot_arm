@@ -1,5 +1,5 @@
 # Turtlebot_arm
-Turtlebot arm ROS project
+Turtlebot arm ROS project with the new feature for face detection demonstration, please check readme at the turtlebot_arm_moveit_demos
 ___
 # Introduction
 ## What the complete project is about
