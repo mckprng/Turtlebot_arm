@@ -169,6 +169,9 @@ public:
     if (moveArmTo(target) == false)
       return;
 
+    /* go to straight up position */
+    // find out how
+
     as_.setSucceeded(result_);
   }
 

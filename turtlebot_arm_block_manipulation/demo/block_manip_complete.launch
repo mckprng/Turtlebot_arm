@@ -23,7 +23,10 @@
 
 
   <!--  ************* Kinect bringup stuff ************* -->
-  <include file="$(find freenect_launch)/launch/freenect.launch" />s
+  <include file="$(find freenect_launch)/launch/freenect.launch" >
+     <!-- Included to fix depth calibration-->
+    <arg name="depth_registration" default="true" />
+  </include>
 
 
 
@@ -43,6 +46,6 @@
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_arm_block_manipulation)/demo/block_manipulation_demo.rviz" />
 
-  <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="0.552972 0.0311763 1.01794 -0.485351 0.0823443 0.864462 0.101775 /base_link /camera_link 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="0.16642 -0.152942 1.00053 -0.344048 0.394775 0.610077 0.594633 /base_link /camera_link 100"/>
 
 </launch>

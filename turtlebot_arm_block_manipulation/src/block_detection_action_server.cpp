@@ -59,6 +59,10 @@
 #include <algorithm>
 #include <sstream> 
 
+
+#include <ros/package.h>
+std::string path = ros::package::getPath("turtlebot_arm_block_manipulation") + "/pcd_files/";
+
 // Flag to indicate block matched our target color
 //#define COLOR_MATCH 0.0        // zmax value for block on the turtlebot
 //#define NO_COLOR_MATCH 0.0
@@ -226,7 +230,8 @@ public:
     //pass.setFilterLimits(table_height_ - 0.12, table_height_ - 0.05);//pass.setFilterLimits(table_height_ - 0.05, table_height_ + block_size_ + 0.05);
     pass.setFilterLimits(table_height_ - 0.05 , table_height_ + block_size_ + 0.02 + 0.016); 
     pass.filter(*cloud_filtered);
-    pcl::io::savePCDFile ("/home/mscv/Desktop/before_filtering.pcd", *cloud_filtered); // added by DNA
+    std::cout << path+ "before_filtering.pcd";
+    pcl::io::savePCDFile ((path + "before_filtering.pcd"), *cloud_filtered); // added by DNA
     if (cloud_filtered->points.size() == 0)
     {
       ROS_ERROR("0 points left");
@@ -266,7 +271,7 @@ public:
     }
     
     // Filtering second time
-    pcl::io::savePCDFile ("/home/mscv/Desktop/filter_table.pcd", *cloud_filtered); // added by DNA
+    pcl::io::savePCDFile (path + "filter_table.pcd", *cloud_filtered); // added by DNA
     /**********************************************************************************************/
     nr_points = cloud_filtered->points.size ();
     while (cloud_filtered->points.size() > 0.3 * nr_points)
@@ -306,7 +311,7 @@ public:
      * detect color DNA
      * */
 
-    pcl::io::savePCDFile ("/home/mscv/Desktop/filter_robot.pcd", *cloud_filtered); // added by DNA
+    pcl::io::savePCDFile (path + "filter_robot.pcd", *cloud_filtered); // added by DNA
 
     // Creating the KdTree object for the search method of the extraction
     pcl::search::KdTree<pcl::PointXYZRGB>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZRGB>);
@@ -438,6 +443,9 @@ public:
         
         /******************************DNA********************************************************************/
         zmax = COLOR_MATCH;
+
+
+        // uncomment for only green cube
         if (greenSum > blueSum && greenSum > redSum)  // a green cube is used in this project
            addBlock(xmin , ymin , zmax , angle, (unsigned long) blueSum/pixelCount);
         /**************************************************************************************************/
