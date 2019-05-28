@@ -1,3 +1,6 @@
+# Changes to the IOJVision fork
+When launching the block_manip_complete.launch eventually some pcd-files would be created. These would be saved at the Desktop of the mscv user. This has been changed to a directory in this package, turtlebot_arm_block_manipulation/pcd_files/, so that any user can use the the package. In the same launch file the freenect.launch include now uses the factory calibration of the IR depth sensor due to it being skewed with the colour image without this setting.
+
 # Turtlebot_arm
 Turtlebot arm ROS project with the new feature for face detection demonstration, please check readme at the turtlebot_arm_moveit_demos
 ___
